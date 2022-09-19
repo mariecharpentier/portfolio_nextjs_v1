@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #5E72EB;
+}
+
+@layer base {
+
+  h1 {
+    @apply font-bold text-primary
+  }
+
+  h2 {
+    @apply font-bold text-3xl sm:text-4xl text-primary
+  }
+
+  h3 {
+    @apply text-2xl sm:text-3xl
+  }
+
+  li {
+    @apply cursor-pointer text-sm text-primary-dark
+  }
+
+  p {
+    @apply text-primary
+  }
+
+}
+
+
+
+.bigshape2 {
+  border-radius: 64% 36% 0% 100% / 30% 30% 70% 70%;
+}
