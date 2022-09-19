@@ -1,11 +1,10 @@
 import React from 'react'
 import { FaReact } from 'react-icons/fa'
 import { SiNextdotjs } from 'react-icons/si'
-import { motion } from 'framer-motion'
 
 const Skills = () => {
     return (
-        <div className='max-w-[820px] px-4 pt-2 w-full md:grid grid-cols-3 gap-6'>
+        <div className='max-w-[820px] px-6 lg:px-4 pt-2 w-full md:grid grid-cols-3 gap-6'>
 
             <div className='col-span-3'>
                 <h3 className='pt-4 text-primary font-bold'>Skills</h3>

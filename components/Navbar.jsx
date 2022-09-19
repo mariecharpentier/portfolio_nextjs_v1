@@ -67,11 +67,11 @@ const Navbar = () => {
                     <div className='contact-section px-4 pb-2 absolute bottom-0'>
                         <p className='text-primary font-bold'>Contact Me</p>
                         <div className="flex items-center justify-between my-4">
-                            <div className='py-2 w-10 h-10 border border-primary rounded-lg shadow-lg flex justify-center items-center'>
-                                <FaLinkedinIn className='text-primary'/>
+                            <div className='py-2 w-10 h-10 bg-primary rounded-lg shadow-lg flex justify-center items-center'>
+                                <a href="https://www.linkedin.com/in/marie-charpentier/"><FaLinkedinIn className='text-secondary'/></a>
                             </div>
-                            <div className='py-2 w-10 h-10 border border-primary rounded-lg shadow-lg flex justify-center items-center'>
-                                <AiOutlineMail className='text-primary'/>
+                            <div className='py-2 w-10 h-10 bg-primary rounded-lg shadow-lg flex justify-center items-center'>
+                                <a href="mailto:charpentier.marie@hotmail.fr"><AiOutlineMail className='text-secondary'/></a>
                             </div>
                         </div>
                     </div>

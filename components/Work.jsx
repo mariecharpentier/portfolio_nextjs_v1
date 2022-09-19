@@ -11,9 +11,9 @@ const Work = () => {
       initial={{ opacity: 0, y: 200 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 1, delay: 0.4 }}>
+      transition={{ duration: 1, delay: 0}}>
           <section id="work" className='bg-primary-light w-full flex flex-col items-center justify-between py-6 md:py-16'>
-            <div className='max-w-[820px] py-4 px-4 md:grid grid-cols-3 gap-6'>
+            <div className='max-w-[820px] py-4 px-6 lg:px-4 md:grid grid-cols-3 gap-6'>
               
               <div className='col-start-1 col-span-3 row-start-1'>
                 <h2 className='pb-4 text-white'>Work</h2>
@@ -69,7 +69,7 @@ const Work = () => {
               </div>
               
             </div>
-      </section>
+          </section>
       </motion.div>
     )
 }
