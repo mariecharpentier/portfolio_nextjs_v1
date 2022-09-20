@@ -13,7 +13,7 @@ const Contact = () => {
         <section id="contact" className='bg-secondary w-full md:h-screen px-4 py-2'>
             <div className='max-w-[1120px] w-full h-full mx-auto flex justify-center items-center'>
                 <div className='flex items-center md:items-between justify-center w-full'>
-                    <h2 className='py-4 px-2'>Let's get in touch! </h2>
+                    <h2 className='py-4 px-2'>Let&apos;s get in touch! </h2>
                     <div className='p-2 m-2 bg-primary animate-pulse rounded-full shadow-lg'>
                         <a href="https://www.linkedin.com/in/marie-charpentier/"><FaLinkedinIn size={32} className='text-white m-2'/></a>
                     </div>

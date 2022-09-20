@@ -35,7 +35,7 @@ const Skills = () => {
                 </ul>
             </div>
             <div className='col-span-3'>
-                <p className='pt-8 text-lg font-semibold'>What I 'm learning these days</p>
+                <p className='pt-8 text-lg font-semibold'>What I&apos;m learning these days</p>
                 <div className='text-primary-light w-28 py-4 flex justify-between'>
                     <FaReact size={50}/>
                     <SiNextdotjs size={50} />

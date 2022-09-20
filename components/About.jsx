@@ -16,7 +16,7 @@ const About = () => {
           <div className='max-w-[820px] p-6 lg:p-4 md:grid grid-cols-3 gap-6'>
               <div className='col-span-2'>
                   <h2 className='py-4'>About me</h2>
-                  <p>So far, I've had the priviledge to work for digital agencies based in Paris, specialised in eLearning or Advertising.</p>
+                  <p>So far, I&apos;ve had the priviledge to work for digital agencies based in Paris, specialised in eLearning or Advertising.</p>
                   <p>I like to create beautiful interfaces, and to learn new languages.</p>
               </div>
               <div className='w-[180px] z-10 mt-16 md:my-0 lg:w-[220px] m-auto relative before:border-2 before:border-primary before:rounded-md before:absolute before:w-full before:h-full before:-top-5 before:left-5'>

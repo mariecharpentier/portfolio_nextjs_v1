@@ -3,12 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { AiOutlineMenu, AiOutlineMail } from 'react-icons/ai';
 import { CgClose } from 'react-icons/cg'
 import { FaLinkedinIn } from 'react-icons/fa';
-// import { useRouter } from 'next-router';
+import { useRouter } from 'next/router';
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
-    const [navBg, setNavBg] = useState('red');
-    const [linkColor, setLinkColor] = useState('blue');
+    const router = useRouter();
 
     const handleNav = () => {
         setNav(!nav);
@@ -21,16 +20,16 @@ const Navbar = () => {
                 <div>
                     <ul className='hidden md:flex mr-2'>
                         <Link href="/#home">
-                            <li onClick={()=> setNav(false)} className='text-primary-dark ml-10 uppercase hover:border-b'>Home</li>
+                            <li onClick={()=> setNav(false)} className='text-primary-dark ml-10 uppercase hover:font-bold focus:text-red'>Home</li>
                         </Link>
                         <Link href="/#about">
-                            <li onClick={()=> setNav(false)} className='text-primary-dark ml-10 uppercase hover:border-b'>About Me</li>
+                            <li onClick={()=> setNav(false)} className='text-primary-dark ml-10 uppercase hover:font-bold transition-200'>About</li>
                         </Link>
                         <Link href="/#work">
-                            <li onClick={()=> setNav(false)} className='text-primary-dark ml-10 uppercase hover:border-b'>Work</li>
+                            <li onClick={()=> setNav(false)} className='text-primary-dark ml-10 uppercase hover:font-bold transition-200'>Work</li>
                         </Link>
                         <Link href="/#contact">
-                            <li onClick={()=> setNav(false)} className='text-primary-dark ml-10 uppercase hover:border-b'>Contact Me</li>
+                            <li onClick={()=> setNav(false)} className='text-primary-dark ml-10 uppercase hover:font-bold transition-200'>Contact</li>
                         </Link>
                     </ul>
                     <div onClick={handleNav} className='md:hidden'>
@@ -56,7 +55,7 @@ const Navbar = () => {
                                 <li onClick={()=> setNav(false)} className='text-primary py-4 uppercase'>Home</li>
                             </Link>
                             <Link href="/#about">
-                                <li onClick={()=> setNav(false)} className='text-primary marker:py-4 uppercase'>About Me</li>
+                                <li onClick={()=> setNav(false)} className='text-primary marker:py-4 uppercase'>About</li>
                             </Link>
                             <Link href="/#work">
                                 <li onClick={()=> setNav(false)} className='text-primary py-4 uppercase'>Work</li>
@@ -65,7 +64,7 @@ const Navbar = () => {
                     </div>
 
                     <div className='contact-section px-4 pb-2 absolute bottom-0'>
-                        <p className='text-primary font-bold'>Contact Me</p>
+                        <p className='text-primary font-bold'>Contact</p>
                         <div className="flex items-center justify-between my-4">
                             <div className='py-2 w-10 h-10 bg-primary rounded-lg shadow-lg flex justify-center items-center'>
                                 <a href="https://www.linkedin.com/in/marie-charpentier/"><FaLinkedinIn className='text-secondary'/></a>
