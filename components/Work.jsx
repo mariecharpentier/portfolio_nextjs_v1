@@ -7,18 +7,13 @@ import { motion } from 'framer-motion'
 
 const Work = () => {
     return (
-      <motion.div 
-      initial={{ opacity: 0, y: 200 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 1, delay: 0}}>
           <section id="work" className='bg-primary-light w-full flex flex-col items-center justify-between py-6 md:py-16'>
             <div className='max-w-[820px] py-4 px-6 lg:px-4 md:grid grid-cols-3 gap-6'>
               
               <div className='col-start-1 col-span-3 row-start-1'>
                 <h2 className='pb-4 text-white'>Work</h2>
               </div>
-           
+
               <div className='col-start-1 col-span-2 row-start-2 row-span-1 group flex flex-col place-content-start place-items-center pb-4 md:pb-0'>
                 <div className='py-4 px-6 border-2 border-white rounded-t-md'>
                   <Image src={BgImg1} alt='/' className=''/>
@@ -67,10 +62,9 @@ const Work = () => {
                     Gulp, GitHub, Figma, Photoshop, Adobe XD.</p>
                  </div>
               </div>
-              
+
             </div>
           </section>
-      </motion.div>
     )
 }
 

@@ -6,19 +6,27 @@ import LogoSM from '../public/assets/logoSM.svg'
 import { AiOutlineMenu, AiOutlineMail } from 'react-icons/ai';
 import { CgClose } from 'react-icons/cg'
 import { FaLinkedinIn } from 'react-icons/fa';
-import { useRouter } from 'next/router';
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
-    const router = useRouter();
+    // const [scrollT, setScrollT] = useState('');
+
+    // const handleScroll = () => {
+    //     setScrollT(window.scrollY);
+    // }
+
+    // useEffect(() => {
+    //     window.addEventListener("scroll", handleScroll); 
+    //     return () => window.removeEventListener("scroll", handleScroll);
+    // })
 
     const handleNav = () => {
         setNav(!nav);
     }
     
     return (
-        <header className='fixed w-full h-20 z-[1000]'>
-            <div id="nav-desktop" className='flex justify-between w-full h-full p-4 backdrop-blur-sm xl:backdrop-blur-none'>
+        <header className='fixed w-full h-16 z-[1000]'>
+            <div id="nav-desktop" className='relative flex justify-between w-full h-full p-4 backdrop-blur-sm xl:backdrop-blur-none'>
                 <Link href="/#home">
                     <a>
                         <Image 

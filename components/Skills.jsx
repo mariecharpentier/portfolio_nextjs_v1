@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaReact } from 'react-icons/fa'
 import { SiNextdotjs } from 'react-icons/si'
+import { FiFramer } from 'react-icons/fi'
 
 const Skills = () => {
     return (
@@ -36,9 +37,10 @@ const Skills = () => {
             </div>
             <div className='col-span-3'>
                 <p className='pt-8 text-lg font-semibold'>What I&apos;m learning these days</p>
-                <div className='text-primary-light w-28 py-4 flex justify-between'>
+                <div className='text-primary-light w-48 py-4 flex justify-between'>
                     <FaReact size={50}/>
                     <SiNextdotjs size={50} />
+                    <FiFramer size={50} />
                 </div>
                 <p className='font-semibold'>... And I love it!</p>
                 <div className='py-2'>
