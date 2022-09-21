@@ -23,7 +23,7 @@ const Main = () => {
                     <h1 className='text-4xl font-extrabold'>
                         I&apos;m a <span className='text-secondary'>Front-End</span> Developer,
                     </h1>
-                    <p className='leading-10 max-w-[70%] m-auto'>
+                    <p className='leading-10 m-auto'>
                         and I like to create things on Internet.
                     </p>
                 </div>
