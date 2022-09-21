@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import Logo from '../public/assets/logo.svg'
+import LogoSM from '../public/assets/logoSM.svg'
 import { AiOutlineMenu, AiOutlineMail } from 'react-icons/ai';
 import { CgClose } from 'react-icons/cg'
 import { FaLinkedinIn } from 'react-icons/fa';
@@ -16,7 +19,16 @@ const Navbar = () => {
     return (
         <header className='fixed w-full h-20 z-[1000]'>
             <div id="nav-desktop" className='flex justify-between w-full h-full p-4 backdrop-blur-sm xl:backdrop-blur-none'>
-                <p className='text-primary-dark font-bold text-xl'>Marie C.</p>
+                <Link href="/#home">
+                    <a>
+                        <Image 
+                            src={Logo}
+                            alt="Logo"
+                            width="36px"
+                            height="36px"
+                        />
+                    </a>
+                </Link>
                 <div>
                     <ul className='hidden md:flex mr-2'>
                         <Link href="/#home">
@@ -42,9 +54,18 @@ const Navbar = () => {
                 <div className={nav ? 'fixed left-0 top-0 w-[75%] sm:w-[65%] md:w-[45%] h-screen bg-secondary ease-in duration-500' 
                                     : 'fixed left-[-100%] top-0 p-10 ease-in w-[75%] sm:w-[65%] md:w-[45%] h-screen bg-secondary duration-500'}>
                     
-                    <div className='py-2 flex w-full items-center justify-between'>
-                        <p className='text-primary font-bold text-xl ml-4 mt-2'>Marie C.</p>
-                        <div onClick={handleNav} className='cursor-pointer mr-4 mt-1'>
+                    <div className='flex w-full items-center justify-between'>
+                        <Link href="/#home">
+                            <a className='p-4'>
+                                <Image 
+                                    src={LogoSM}
+                                    alt="Logo"
+                                    width="36px"
+                                    height="36px"
+                                />
+                            </a>
+                        </Link>
+                        <div onClick={handleNav} className='cursor-pointer px-4 pb-4'>
                             <CgClose size={25} className='text-primary'/>
                         </div>
                     </div>
@@ -66,7 +87,7 @@ const Navbar = () => {
                     <div className='contact-section px-4 pb-2 absolute bottom-0'>
                         <p className='text-primary font-bold'>Contact</p>
                         <div className="flex items-center justify-between my-4">
-                            <div className='py-2 w-10 h-10 bg-primary rounded-lg shadow-lg flex justify-center items-center'>
+                            <div className='py-2 mr-2 w-10 h-10 bg-primary rounded-lg shadow-lg flex justify-center items-center'>
                                 <a href="https://www.linkedin.com/in/marie-charpentier/"><FaLinkedinIn className='text-secondary'/></a>
                             </div>
                             <div className='py-2 w-10 h-10 bg-primary rounded-lg shadow-lg flex justify-center items-center'>

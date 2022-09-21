@@ -26,8 +26,8 @@ const Work = () => {
                 <div className='text-primary p-4 bg-white h-full rounded-b-md'>
                   <h3 className='font-semibold text-primary pb-2'>ELearning Frontend Development</h3>
                   <p className='text-sm'>I built the interfaces of eLearning modules, with <span className='font-semibold'>CSS Animations and jQuery UI</span>.</p>
-                  <p className='text-sm'>The modules were created by Learning Designers to an adult audience.</p>
-                  <p className='text-sm'>Compliant to SCORM, these modules were then integrated on Moodle platform.</p>
+                  <p className='text-sm'>The modules were designed by Instructional Designers, mostly for an adult audience in a corporate environment.</p>
+                  <p className='text-sm'>Compliant to SCORM (Shareable Content Object Reference Model), these modules were then uploaded on LMS.</p>
                   <p className='text-sm py-2'><span className='font-semibold'>Languages: </span>HTML, CSS, jQuery.</p>
                   <p className='text-sm'><span className='font-semibold'>Tools: </span>Gulp, Subversion, Moodle.</p>
                 </div>
