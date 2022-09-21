@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Logo from '../public/assets/logo.svg'
 import LogoSM from '../public/assets/logoSM.svg'
@@ -9,16 +9,6 @@ import { FaLinkedinIn } from 'react-icons/fa';
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
-    // const [scrollT, setScrollT] = useState('');
-
-    // const handleScroll = () => {
-    //     setScrollT(window.scrollY);
-    // }
-
-    // useEffect(() => {
-    //     window.addEventListener("scroll", handleScroll); 
-    //     return () => window.removeEventListener("scroll", handleScroll);
-    // })
 
     const handleNav = () => {
         setNav(!nav);

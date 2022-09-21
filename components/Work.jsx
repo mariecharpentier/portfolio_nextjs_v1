@@ -6,64 +6,104 @@ import BgImg3 from '../public/assets/work/dev.svg'
 import { motion } from 'framer-motion'
 
 const Work = () => {
+
+
+  const containerVariants = {
+    initial: {
+      opacity: 0,
+    },
+    visible: {
+      transition: {
+        type: 'spring',
+        damping: 6,
+        duration: 0.1, 
+        when: "beforeChildren",
+        staggerChildren: "0.1"
+      },
+      opacity: 1,
+    }
+  }
+
+  const childVariant = {
+    initial: {
+      opacity: 0,
+    },
+    visible: {
+      transition: {
+        duration: 0.1, 
+      },
+      opacity: 1,
+    }
+  }
+
+
     return (
           <section id="work" className='bg-primary-light w-full flex flex-col items-center justify-between py-6 md:py-16'>
-            <div className='max-w-[820px] py-4 px-6 lg:px-4 md:grid grid-cols-3 gap-6'>
-              
-              <div className='col-start-1 col-span-3 row-start-1'>
-                <h2 className='pb-4 text-white'>Work</h2>
-              </div>
-
-              <div className='col-start-1 col-span-2 row-start-2 row-span-1 group flex flex-col place-content-start place-items-center pb-4 md:pb-0'>
-                <div className='py-4 px-6 border-2 border-white rounded-t-md'>
-                  <Image src={BgImg1} alt='/' className=''/>
-                </div>
-                <div className='text-primary p-4 bg-white h-full rounded-b-md'>
-                  <h3 className='font-semibold text-primary pb-2'>ELearning Frontend Development</h3>
-                  <p className='text-sm'>I built the interfaces of eLearning modules, with <span className='font-semibold'>CSS Animations and jQuery UI</span>.</p>
-                  <p className='text-sm'>The modules were designed by Instructional Designers, mostly for an adult audience in a corporate environment.</p>
-                  <p className='text-sm'>Compliant to SCORM (Shareable Content Object Reference Model), these modules were then uploaded on LMS.</p>
-                  <p className='text-sm py-2'><span className='font-semibold'>Languages: </span>HTML, CSS, jQuery.</p>
-                  <p className='text-sm'><span className='font-semibold'>Tools: </span>Gulp, Subversion, Moodle.</p>
-                </div>
-                <div>
-                  
-                </div>
-              </div>
-             
-             
-              <div className='col-start-3 col-span-1 row-start-2 row-span-1 group flex flex-col place-content-start place-items-center pb-4 md:pb-0'>
-                <div className='p-6 w-full border-2 border-white rounded-t-md'>
-                  <div className='max-w-[180px] m-auto pt-4 pb-2'>
-                    <Image src={BgImg2} alt='/' className='w-full h-auto'/>
-                  </div>
-                </div>
-                <div className='text-primary p-4 bg-white h-full w-full rounded-b-md'>
-                  <h3 className='font-semibold text-primary/90 leading-8 pb-2'>Digital marketing</h3>
-                  <p className='text-sm'>For marketing campaigns, I coded <span>landing pages from scratch</span>, emailings and banners.</p>
-                  <p className='text-sm py-2'><span className='font-semibold'>Languages: </span>
-                  HTML, CSS, Sass, Bootstrap, Tailwind, JavaScript, jQuery.</p>
-                  <p className='text-sm'><span className='font-semibold'>Tools: </span>
-                  Gulp, Photoshop, Google Web Designer, MJML.</p>
-                </div>
-              </div>
-              
-              
-              <div className='border-2 border-white col-start-1 col-span-3 row-span-1 row-start-3 rounded-lg group flex flex-col md:flex-row place-content-start place-items-center'>
-                <div className='p-8 max-w-sm h-full rounded-t-md md:rounded-tr-none md:rounded-l-lg'>
-                  <Image src={BgImg3} alt='/' className=''/>
-                </div>
-                <div className='text-primary p-4 bg-white h-full rounded-b-md md:rounded-bl-none md:rounded-r-sm'>
-                    <h3 className='font-semibold text-primary pb-2'>Web Development</h3>
-                    <p className='text-sm'>Developed and maintained code for in-house and client websites: WordPress websites, or interfaces implemented on external websites.</p>
-                    <p className='text-sm py-2'><span className='font-semibold'>Languages: </span>
-                    HTML, CSS, Sass, Bootstrap, Tailwind, JavaScript, jQuery, WordPress, PHP, SQL.</p>
-                    <p className='text-sm'><span className='font-semibold'>Tools: </span>
-                    Gulp, GitHub, Figma, Photoshop, Adobe XD.</p>
-                 </div>
-              </div>
-
+            <div className='w-full max-w-[880px] p-6'>
+              <h2 className='pt-4 pb-4 text-primary'>Work</h2>
             </div>
+              
+            <motion.div 
+              variants={containerVariants}
+              initial="initial"
+              whileInView="visible"
+              viewport={{ once: true }} 
+              className='max-w-[820px] p-6 lg:px-4 w-full md:grid grid-cols-3 gap-4'>
+
+                <motion.div 
+                  variants={childVariant} 
+                  className='col-span-1 p-12 md:bg-primary/40 rounded-md'>
+                    <div className='max-w-[180px] md:max-w-full m-auto'>
+                      <Image src={BgImg3} alt='/'/>
+                    </div>
+                </motion.div>
+                <motion.div 
+                  variants={childVariant}
+                  className='col-span-2 text-white text-justify bg-primary/40 rounded-md p-4 flex flex-col justify-start'>
+                    <h3 className='font-semibold text-white pb-2'>Web Development</h3>
+                    <p className='text-sm text-white'>Developed and maintained code for in-house and client websites: WordPress websites, or interfaces implemented on external websites.</p>
+                    <p className='text-sm text-white pt-2 mt-auto'><span className='font-semibold'>Languages: </span>
+                    HTML, CSS, Sass, Bootstrap, Tailwind, JavaScript, jQuery, WordPress, PHP, SQL.</p>
+                    <p className='text-sm text-white'><span className='font-semibold'>Tools: </span>
+                    Gulp, GitHub, Figma, Photoshop, Adobe XD.</p>
+                </motion.div>
+
+                <motion.div 
+                  variants={childVariant} 
+                  className='col-span-1 p-8 md:px-3 md:bg-primary/40 rounded-md flex items-center'>
+                    <div className='max-w-[300px] md:max-w-full m-auto'>
+                      <Image src={BgImg1} alt='/'/>
+                    </div>
+                </motion.div>
+
+                <motion.div 
+                  variants={childVariant}
+                  className='col-span-2 text-white text-justify bg-primary/40 rounded-md px-4 py-4'>
+                    <h3 className='font-semibold text-white pb-2'>E-Learning</h3>
+                    <p className='text-sm text-white/90'>I built the interfaces of eLearning modules, with <span className='font-semibold'>CSS Animations and jQuery UI</span>. The modules were created by Instructional Designers, mostly for an adult audience in a corporate environment. Compliant to SCORM (Shareable Content Object Reference Model), these modules were then uploaded on LMS.</p>
+                    <p className='text-sm text-white pt-2 mt-auto'><span className='font-semibold'>Languages: </span>HTML, CSS, jQuery.</p>
+                    <p className='text-sm text-white'><span className='font-semibold'>Tools: </span>Gulp, Subversion, Moodle.</p>
+                </motion.div>
+              
+                <motion.div 
+                  variants={childVariant} 
+                  className='col-span-1 p-6 md:p-4 md:bg-primary/40 rounded-md w-full flex items-center'>
+                    <div className='max-w-[220px] md:max-w-[180px] m-auto'>
+                      <Image src={BgImg2} alt='/'/>
+                    </div>
+                </motion.div>
+                <motion.div 
+                  variants={childVariant}  
+                  className='col-span-2 text-white text-justify bg-primary/40 rounded-md p-4 flex flex-col justify-start'>
+                    <h3 className='font-semibold leading-8 text-white pb-2'>Digital Marketing</h3>
+                    <p className='text-sm text-white'>For the purpose of marketing campaigns, I coded <span className='font-semibold'>animated landing pages from scratch</span>, emailings and banners.</p>
+                    <p className='text-sm text-white pt-2 mt-auto'><span className='font-semibold'>Languages: </span>
+                    HTML, CSS, Sass, Bootstrap, Tailwind, JavaScript, jQuery.</p>
+                    <p className='text-sm text-white'><span className='font-semibold'>Tools: </span>
+                  Gulp, Photoshop, Google Web Designer, MJML.</p>
+                </motion.div>
+                              
+            </motion.div>
           </section>
     )
 }

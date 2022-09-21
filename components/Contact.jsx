@@ -10,7 +10,7 @@ const Contact = () => {
                 initial={{ opacity: 0}}
                 whileInView={{ opacity: 1 }}
                 viewport={{ fallback: true }}
-                transition={{ duration: 2, delay: 0 }}
+                transition={{ duration: 2, delay: 0.2 }}
                 className='max-w-[1120px] w-full h-full mx-auto flex justify-center items-center'>
                     <div className='flex items-center md:items-between justify-center w-full'>
                         <h2 className='py-4 px-2'>Let&apos;s get in touch! </h2>
