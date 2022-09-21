@@ -25,7 +25,7 @@ const Navbar = () => {
     }
     
     return (
-        <header className='fixed w-full h-16 z-[1000]'>
+        <header className='fixed w-full h-16 z-[2000]'>
             <div id="nav-desktop" className='relative flex justify-between w-full h-full p-4 backdrop-blur-sm xl:backdrop-blur-none'>
                 <Link href="/#home">
                     <a>

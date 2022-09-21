@@ -1,12 +1,38 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Skills from './Skills';
 import Photo from '../public/assets/portrait4.svg'
-import { motion, useInView } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const About = () => {
-    // const ref = useRef(null)
-    // const isInView = useInView(ref, {once: true})
+
+  const containerVariants = {
+    initial: {
+      x: -20,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      transition: {
+        duration: 0.5, 
+        delay: 0.2
+      },
+      opacity: 1,
+    }
+  }
+
+  const frameVariant = {
+    initial: {
+      x: 40
+    },
+    visible: {
+      x: 0,
+      transition: {
+        duration: 0.5, 
+        delay: 0.2
+      }
+    }
+  }
 
     return (
       <section id="about" className='bg-white overflow-scroll w-full flex flex-col items-center justify-between py-6 md:py-16'>
@@ -18,13 +44,19 @@ const About = () => {
               </div>
 
               <motion.div 
-                initial={{ opacity: 0, x: 60}}
-                whileInView={{ opacity: 1, x:0 }}
-                viewport={{ fallback: true }}
-                transition={{ duration: 1, delay: 0 }}>
-                <div className='w-[180px] z-10 mt-16 md:my-0 lg:w-[220px] m-auto relative before:border-2 before:border-primary before:rounded-md before:absolute before:w-full before:h-full before:-top-5 before:left-5'>
-                  <div className='bg-primary-light py-4 px-6 z-20 rounded-lg w-[180px] m-auto lg:w-[220px] h-auto'>
-                  <Image src={Photo} alt='/' className='w-full h-auto rounded-lg  mt-2'/>
+                variants={containerVariants}
+                initial="initial"
+                whileInView="visible"
+                viewport={{ fallback: true }}>
+                <div className='w-[180px] mt-16 md:my-0 lg:w-[220px] m-auto relative'>
+                  <motion.div  
+                    variants={frameVariant}
+                    initial="initial"
+                    whileInView="visible"
+                    viewport={{ fallback: true }}
+                    className='-z-9 border-2 border-primary rounded-md absolute w-full h-full -top-5 left-5'></motion.div>
+                  <div className='bg-primary-light py-4 px-6 rounded-lg w-[180px] m-auto lg:w-[220px]'>
+                    <Image src={Photo} alt='/' className='w-full h-auto rounded-lg mt-2'/>
                   </div>
                 </div>
               </motion.div>
