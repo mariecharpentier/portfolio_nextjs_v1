@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Logo from '../public/assets/logo.svg'
 import LogoSM from '../public/assets/logoSM.svg'
-import { AiOutlineMenu, AiOutlineMail } from 'react-icons/ai';
+import { AiOutlineMenu } from 'react-icons/ai';
 import { CgClose } from 'react-icons/cg'
 import { FaLinkedinIn } from 'react-icons/fa';
 
@@ -79,17 +79,16 @@ const Navbar = () => {
                             <Link href="/#work">
                                 <li onClick={()=> setNav(false)} className='text-primary py-4 uppercase'>Work</li>
                             </Link>
+                            <Link href="/#contact">
+                                <li onClick={()=> setNav(false)} className='text-primary uppercase'>Contact</li>
+                            </Link>
                         </ul>
                     </div>
 
                     <div className='contact-section px-4 pb-2 absolute bottom-0'>
-                        <p className='text-primary font-bold'>Contact</p>
                         <div className="flex items-center justify-between my-4">
                             <div className='py-2 mr-2 w-10 h-10 bg-primary rounded-lg shadow-lg flex justify-center items-center'>
                                 <a href="https://www.linkedin.com/in/marie-charpentier/"><FaLinkedinIn className='text-secondary'/></a>
-                            </div>
-                            <div className='py-2 w-10 h-10 bg-primary rounded-lg shadow-lg flex justify-center items-center'>
-                                <a href="mailto:charpentier.marie@hotmail.fr"><AiOutlineMail className='text-secondary'/></a>
                             </div>
                         </div>
                     </div>
