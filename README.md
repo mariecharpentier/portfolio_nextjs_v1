@@ -13,12 +13,6 @@ A minimal portfolio template built with [Next.js](https://nextjs.org/): [`create
 </ul>
 
 
-## Getting Started 🍪
-```
-npm run dev
-```
-<br/>
-
 ## Technologies used 🛠️
 
 <ul>
