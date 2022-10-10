@@ -3,6 +3,8 @@ import Image from 'next/image';
 import BgImg1 from '../public/assets/work/elearning.svg'
 import BgImg2 from '../public/assets/work/mktg.svg'
 import BgImg3 from '../public/assets/work/dev.svg'
+import BgImg4 from '../public/assets/work/anim.svg'
+
 import { motion } from 'framer-motion'
 
 const Work = () => {
@@ -15,7 +17,7 @@ const Work = () => {
     visible: {
       transition: {
         type: 'spring',
-        damping: 6,
+        damping: 8,
         duration: 0.1, 
         when: "beforeChildren",
         staggerChildren: "0.1"
@@ -61,10 +63,10 @@ const Work = () => {
                   variants={childVariant}
                   className='col-span-2 text-justify bg-primary/20 rounded-md p-4 flex flex-col justify-start'>
                     <h3 className='font-semibold text-primary pb-2'>Web Development</h3>
-                    <p className='text-sm text-primary'>Developed and maintained code for in-house and client websites: WordPress websites, or interfaces implemented on external websites.</p>
-                    <p className='text-sm text-primary pt-2 mt-auto'><span className='font-semibold'>Languages: </span>
+                    <p className='text-sm text-primary-dark'>Developed and maintained code for in-house and client websites: WordPress websites, or interfaces implemented on external websites.</p>
+                    <p className='text-sm text-primary-dark pt-2 mt-auto'><span className='font-semibold'>Languages: </span>
                     HTML, CSS, Sass, Bootstrap, Tailwind, JavaScript, jQuery, WordPress, PHP, SQL.</p>
-                    <p className='text-sm text-primary'><span className='font-semibold'>Tools: </span>
+                    <p className='text-sm text-primary-dark'><span className='font-semibold'>Tools: </span>
                     Gulp, GitHub, Figma, Photoshop, Adobe XD.</p>
                 </motion.div>
 
@@ -80,9 +82,9 @@ const Work = () => {
                   variants={childVariant}
                   className='col-span-2 text-justify bg-primary/20 rounded-md px-4 py-4'>
                     <h3 className='font-semibold text-primary pb-2'>E-Learning</h3>
-                    <p className='text-sm text-primary'>I built the interfaces of eLearning modules, with <span className='font-semibold'>CSS Animations and jQuery UI</span>. The modules were created by Instructional Designers, mostly for an adult audience in a corporate environment. Compliant to SCORM (Shareable Content Object Reference Model), these modules were then uploaded on LMS.</p>
-                    <p className='text-sm text-primary pt-2 mt-auto'><span className='font-semibold'>Languages: </span>HTML, CSS, jQuery.</p>
-                    <p className='text-sm text-primary'><span className='font-semibold'>Tools: </span>Gulp, Subversion, Moodle.</p>
+                    <p className='text-sm text-primary-dark'>I built the interfaces of eLearning modules, with <span className='font-semibold'>CSS Animations and jQuery UI</span>. The modules were created by Instructional Designers, mostly for an adult audience in a corporate environment. Compliant to SCORM (Shareable Content Object Reference Model), these modules were then uploaded on LMS.</p>
+                    <p className='text-sm text-primary-dark pt-2 mt-auto'><span className='font-semibold'>Languages: </span>HTML, CSS, jQuery.</p>
+                    <p className='text-sm text-primary-dark'><span className='font-semibold'>Tools: </span>Gulp, Subversion, Moodle.</p>
                 </motion.div>
               
                 <motion.div 
@@ -97,12 +99,30 @@ const Work = () => {
                   className='col-span-2 text-justify bg-primary/20 rounded-md p-4 flex flex-col justify-start'>
                     <h3 className='font-semibold leading-8 text-primary pb-2'>Digital Marketing</h3>
                     <p className='text-sm text-primary-dark'>For the purpose of marketing campaigns, I coded <span className='font-semibold'>animated landing pages from scratch</span>, emailings and banners.</p>
-                    <p className='text-sm text-primary pt-2 mt-auto'><span className='font-semibold'>Languages: </span>
+                    <p className='text-sm text-primary-dark pt-2 mt-auto'><span className='font-semibold'>Languages: </span>
                     HTML, CSS, Sass, Bootstrap, Tailwind, JavaScript, jQuery.</p>
-                    <p className='text-sm text-primary'><span className='font-semibold'>Tools: </span>
+                    <p className='text-sm text-primary-dark'><span className='font-semibold'>Tools: </span>
                   Gulp, Photoshop, Google Web Designer, MJML.</p>
                 </motion.div>
-                              
+
+                <motion.div 
+                  variants={childVariant} 
+                  className='col-span-1 px-6 py-4 md:p-4 md:bg-primary/20 rounded-md w-full flex items-center'>
+                    <div className='hidden md:block max-w-[220px] md:max-w-[180px] m-auto'>
+                      <Image src={BgImg4} alt='/'/>
+                    </div>
+                </motion.div>
+                <motion.div 
+                  variants={childVariant}  
+                  className='col-span-2 text-justify bg-primary/20 rounded-md p-4 flex flex-col justify-start'>
+                    <h3 className='font-semibold leading-8 text-primary pb-2'>UI Animations</h3>
+                    <p className='text-sm text-primary-dark'>Animations are essential for enhancing <span className='font-semibold'>user experience.</span>, whether on landing pages, banners, or apps.</p>
+                    <p className='text-sm text-primary-dark mt-3'>From pure CSS to complex js animations, there is an abundance of great tools and libraries that suit every needs. Here is my latest personal experiment, made in CSS only: <a href="https://codepen.io/mariecharpentier" class="font-semibold underline">CodePen</a>.</p>
+                    <p className='text-sm text-primary-dark pt-2 mt-auto'><span className='font-semibold'>Languages: </span>
+                    CSS Animations, Keyframes, JavaScript, Framer, etc.</p>
+                    <p className='text-sm text-primary-dark'><span className='font-semibold'>Tools: </span>
+                  Photoshop, Google Web Designer, etc.</p>
+                </motion.div>             
             </motion.div>
           </section>
     )
