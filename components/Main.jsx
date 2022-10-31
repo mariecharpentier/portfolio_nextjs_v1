@@ -23,7 +23,7 @@ const Main = () => {
                         </motion.div> */}
                     </h1>
                     <h1 className='text-4xl text-primary font-extrabold'>
-                       I'm a  <span className='text-secondary'>Front-End</span> Developer
+                       I&#39;m a  <span className='text-secondary'>Front-End</span> Developer
                     </h1>
                     <p className='text-primary/75 pt-3 m-auto'>
                         with three years of experience building and maintaining responsive interfaces.
