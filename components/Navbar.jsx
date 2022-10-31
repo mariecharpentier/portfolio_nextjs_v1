@@ -30,16 +30,16 @@ const Navbar = () => {
                 <div>
                     <ul className='hidden md:flex mr-2'>
                         <Link href="/#home">
-                            <li onClick={()=> setNav(false)} className='text-primary-dark ml-10 uppercase hover:font-bold focus:text-red'>Home</li>
+                            <li onClick={()=> setNav(false)} className='text-primary-dark ml-10 uppercase font-semibold py-2'>Home</li>
                         </Link>
-                        <Link href="/#about">
-                            <li onClick={()=> setNav(false)} className='text-primary-dark ml-10 uppercase hover:font-bold transition-200'>About</li>
+                        <Link href="/#about" activeStyle={{textDecoration: "underline"}}>
+                            <li onClick={()=> setNav(false)} className='text-primary-dark ml-10 uppercase font-semibold py-2'>About</li>
                         </Link>
                         <Link href="/#work">
-                            <li onClick={()=> setNav(false)} className='text-primary-dark ml-10 uppercase hover:font-bold transition-200'>Work</li>
+                            <li onClick={()=> setNav(false)} className='text-primary-dark ml-10 uppercase font-semibold py-2'>Work</li>
                         </Link>
                         <Link href="/#contact">
-                            <li onClick={()=> setNav(false)} className='text-primary-dark ml-10 uppercase hover:font-bold transition-200'>Contact</li>
+                            <li onClick={()=> setNav(false)} className='text-primary-dark ml-10 uppercase font-semibold py-2'>Contact</li>
                         </Link>
                     </ul>
                     <div onClick={handleNav} className='md:hidden'>
