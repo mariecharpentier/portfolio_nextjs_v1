@@ -117,11 +117,11 @@ const Work = () => {
                   className='col-span-2 text-justify bg-primary/20 rounded-md p-4 flex flex-col justify-start'>
                     <h3 className='font-semibold leading-8 text-primary pb-2'>UI Animation</h3>
                     <p className='text-sm text-primary-dark'>Animations are essential for enhancing <span className='font-semibold'>user experience</span>, whether on landing pages, banners, or even apps.</p>
-                    <p className='text-sm text-primary-dark mt-3'>From pure CSS to complex js animations, there is an abundance of great tools and libraries that suit every needs. Here is my latest personal experiment made with CSS only on <a href="https://codepen.io/mariecharpentier" target="_blank" rel="noreferrer" class="font-semibold underline">CodePen</a>.</p>
+                    <p className='text-sm text-primary-dark mt-3'>From pure CSS to complex js animations, there is an abundance of great tools and libraries that suit every needs. Here is my latest personal experiments on <a href="https://codepen.io/mariecharpentier" target="_blank" rel="noreferrer" className="font-semibold underline">CodePen</a>.</p>
                     <p className='text-sm text-primary-dark pt-2 mt-auto'><span className='font-semibold'>Languages: </span>
-                    CSS Animations, Keyframes, JavaScript, Framer, etc.</p>
+                    CSS Animations, Keyframes, SVG, JavaScript, Framer, etc.</p>
                     <p className='text-sm text-primary-dark'><span className='font-semibold'>Tools: </span>
-                  Photoshop, Google Web Designer, etc.</p>
+                  Photoshop, Google Web Designer, SVGator, etc.</p>
                 </motion.div>             
             </motion.div>
           </section>
