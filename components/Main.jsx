@@ -25,7 +25,7 @@ const Main = () => {
                     <h1 className='text-4xl text-primary font-extrabold'>
                        I&#39;m a  <span className='text-secondary'>Front-End</span> Developer
                     </h1>
-                    <p className='text-primary/75 pt-3 m-auto'>
+                    <p className='text-primary/75 pt-3 m-auto max-w-md'>
                         with three years of experience building and maintaining responsive interfaces.
                     </p>
                 </div>
