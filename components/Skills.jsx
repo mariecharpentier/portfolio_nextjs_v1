@@ -42,10 +42,6 @@ const Skills = () => {
                     <SiNextdotjs size={50} />
                     <FiFramer size={50} />
                 </div>
-                <p className='font-semibold'>... And I love it!</p>
-                <div className='py-2'>
-                    <p>My last certification: <span className='text-primary-light font-semibold'>TOIEC English Listening & Reading</span> (score: 970)</p>
-                </div>
             </div>
       
         </div>
